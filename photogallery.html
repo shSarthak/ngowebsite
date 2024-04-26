@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .icon {
+            font-size: 32px;
+            padding: 10px;
+        }
+
+        .navbar {
+            height: 650px;
+            background-image: url(https://www.helpinghandsindia.in/assets/img/slider/slider4.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            box-shadow: inset 400px 400px 400px 400px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: space-evenly;
+            padding: 40px 20px;
+            background-attachment: fixed;
+        }
+
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #f2eded; /* Added color for logo */
+        }
+
+        .navbar-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar-links li {
+            margin-right: 15px;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #f2eded;
+            font-weight: 400;
+            opacity: 1;
+            margin-left: 20px;
+        }
+
+        .navbar-links li a:hover {
+            text-decoration: underline;
+        }
+
+        .text {
+            padding-top: 20px; /* Adjusted padding */
+            text-align: center;
+        }
+
+        /* Style for the photo gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 10px;
+            padding: 50px 110px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: filter 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Added box shadow */
+        }
+
+        .gallery img:hover {
+            filter: brightness(80%);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay img {
+            border: 5px solid white;
+            border-radius: 10px;
+            cursor: pointer;
+            min-width: 20%;
+            min-height: 20%;
+        }
+
+        /* Style for the question mark icon */
+        .question-mark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .gallery-item:hover .question-mark {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="#" class="navbar-logo">Your Logo</a>
+    <ul class="navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#what">What We Do</a></li>
+        <li><a href="#photo">Photos</a></li>
+        <li><a href="#up">upcoming events</a></li>
+        <li><a href="#do-it">Donation</a></li>
+        <li><a href="#contacting">Contact</a></li>
+    </ul>
+</div>
+<div class="text">
+    <h1>Photo Gallery</h1>
+</div>
+
+<!-- Photo Gallery -->
+<div class="gallery">
+    <!-- Repeat this block for each photo -->
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 1">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <!-- Repeat this block for each photo -->
+    <!-- You can replace the placeholder URLs with your actual image URLs -->
+    <!-- Repeat this block for each photo -->
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 2">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <!-- Repeat this block for each photo -->
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 3">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 4">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 5">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 6">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 7">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/150" alt="Photo 8">
+        <div class="question-mark">&#63;</div> <!-- Question mark icon -->
+    </div>
+</div>
+
+<!-- Enlarged Image Overlay -->
+<div class="overlay">
+    <img src="" alt="Enlarged Photo" id="enlarged-photo">
+</div>
+<footer id="contacting">
+    <div class="footer-content">
+      <!-- First Row -->
+      <div class="footer-row">
+        <img src="logo.png" alt="Logo" width="100">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>  
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <!-- Second Row -->
+      <div class="footer-row">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</p>
+        <p><i class="fas fa-envelope"></i> info@example.com</p>
+        <p><i class="fas fa-phone"></i> +1234567890</p>
+      </div>
+      <!-- Third Row -->
+      <div class="footer-row">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">What We Do</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#events">Upcoming Events</a></li>
+          <li><a href="#donation">Donation</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>       
+
+<script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const overlay = document.querySelector('.overlay');
+    const overlayImage = overlay.querySelector('img');
+
+    galleryItems.forEach(item => {
+        const image = item.querySelector('img');
+        const questionMark = item.querySelector('.question-mark');
+
+        image.addEventListener('click', () => {
+            const src = image.getAttribute('src');
+            overlayImage.src = src;
+            overlay.style.display = 'flex';
+            // Set the size of the image to be the same as its natural size
+            overlayImage.style.maxWidth = 'none';
+            overlayImage.style.maxHeight = 'none';
+        });
+
+        questionMark.addEventListener('click', (event) => {
+            event.stopPropagation();
+        });
+    });
+
+    overlay.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
